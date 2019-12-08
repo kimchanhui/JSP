@@ -10,7 +10,7 @@ public class DBConnection {
 		
 		Connection conn = null;
 		
-		String url = "jdbc:mysql://localhost:3306/WebMarketDb";
+		String url = "jdbc:mysql://localhost:3306/webmarketdb?useUnicode=yes&characterEncoding=UTF-8";
 		String user = "root";
 		String password = "1234";
 		

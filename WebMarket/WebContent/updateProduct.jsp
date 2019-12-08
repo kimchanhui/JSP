@@ -28,9 +28,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-				<img
-					src="./images/<%=rs.getString("p_filename")%>"
-					alt="image" style="width: 100%" />
+				<img src="./images/<%=rs.getString("p_filename")%>" alt="image"
+					style="width: 100%" />
 			</div>
 			<div class="col-md-7">
 				<form name="newProduct" action="./processUpdateProduct.jsp"

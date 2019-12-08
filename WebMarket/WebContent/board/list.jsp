@@ -13,6 +13,15 @@
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
 <title>Board</title>
+<script type="text/javascript">
+	function checkForm() {	
+		if (${sessionId==null}) {
+			alert("로그인 해주세요.");
+			return false;
+		}
+		location.href = "./BoardWriteForm.do?id=<%=sessionId%>"
+	}
+</script>
 </head>
 <body>
 	<jsp:include page="../menu.jsp" />
@@ -34,7 +43,7 @@
 					<tr>
 						<th>번호</th>
 						<th>제목</th>
-						<th>작성일</th>
+<!-- 						<th>작성일</th> -->
 						<th>조회</th>
 						<th>글쓴이</th>
 					</tr>
@@ -46,6 +55,7 @@
 						<td><%=notice.getNum()%></td>
 						<td><a
 							href="./BoardViewAction.do?num=<%=notice.getNum()%>&pageNum=<%=pageNum%>"><%=notice.getSubject()%></a></td>
+						<%-- 						<td><%=notice.getRegist_day()%></td> --%>
 						<td><%=notice.getHit()%></td>
 						<td><%=notice.getName()%></td>
 					</tr>
@@ -92,3 +102,4 @@
 	</div>
 </body>
 </html>
+

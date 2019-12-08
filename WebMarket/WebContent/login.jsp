@@ -13,7 +13,7 @@
 	</div>
 	<div class="container" align="center">
 		<div class="col-md-4 col-md-offset-4">
-			<h3 class="form-signin-heading">Please sign in</h3>
+			<h3 class="form-signin-heading">로그인</h3>
 			<%
 				String error = request.getParameter("error");
 				if (error != null) {
